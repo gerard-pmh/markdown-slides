@@ -1,0 +1,4 @@
+node_modules
+dist
+sh.exe.stackdump
+.idea
