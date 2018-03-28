@@ -9,6 +9,12 @@
 <style>
 <%= require('./style.scss') %>
 </style>
-<%= require('html-loader!../slides.md') %>
+<div class="slides-container">
+    <div class="slides">
+        <div class="slide">
+            <%= require('html-loader!../slides.md') %>
+        </div>
+    </div>
+</div>
 </body>
 </html>

@@ -1,1 +1,26 @@
-@import '../node_modules/highlight.js/styles/xcode.css';
+@import './theme';
+@import '../node_modules/highlight.js/styles/darkula.css';
+
+body {
+  margin: 0;
+  background: $global-bg;
+}
+
+.slides-container {
+  background: $slide-bg;
+  position: fixed;
+  overflow: hidden;
+
+  .slides {
+    height: 100%;
+    display: flex;
+    &.enable-transition {
+      transition: margin-left $slide-transition;
+    }
+  }
+
+  .slide {
+    flex: 1;
+    padding: $slide-padding-top $slide-padding-right $slide-padding-bottom $slide-padding-left;
+  }
+}

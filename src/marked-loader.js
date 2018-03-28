@@ -7,15 +7,18 @@ module.exports = function (content) {
   const renderer = new marked.Renderer()
 
   renderer.hr = function () {
-    return '---'
+    return '</div><div class="slide">'
+  }
+
+  renderer.code = function (code, language) {
+    return '<pre><code class="hljs ' + language + '">' +
+      hljs.highlight(language, code).value +
+      '</code></pre>'
   }
 
   marked.setOptions({
     renderer: renderer,
-    gfm: true,
-    highlight: function (code) {
-      return hljs.highlightAuto(code).value
-    }
+    gfm: true
   })
 
   return marked(content)
