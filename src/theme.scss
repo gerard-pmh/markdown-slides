@@ -1,9 +1,38 @@
+/**
+ * Colors
+ */
+
 $slide-bg: #F2F1EF !default;
 $global-bg: darken($slide-bg, 80) !default;
 
-$slide-transition: .5s !default;
 
-$slide-padding-top: 1em;
-$slide-padding-bottom: 1em;
-$slide-padding-left: 4em;
-$slide-padding-right: 4em;
+/**
+ * Fonts
+ */
+
+$default-font: sans-serif;
+$default-font-size: 2em;
+
+$title-font: sans-serif;
+$title-font-size: 3em;
+
+$code-font: monospace;
+$code-font-size: 1em;
+
+
+
+/**
+ * Slide Padding
+ */
+
+$slide-padding-top: 1em !default;
+$slide-padding-bottom: 1em !default;
+$slide-padding-left: 4em !default;
+$slide-padding-right: 4em !default;
+
+
+/**
+ * Transitions
+ */
+
+$slide-transition: .3s ease-out !default;

@@ -8,6 +8,11 @@ export function resizeSlidesContainer (slidesContainer, { width, height, left, t
 export function resizeSlides (slides, currentPosition, slideCount, { width }) {
   slides.style.width = `${slideCount * width}px`
   slides.style.marginLeft = `-${currentPosition * width}px`
+  for (let i = 0; i < slideCount; i++) {
+    for (let j = 0; j < slides.children[i].childElementCount; j++) {
+      slides.children[i].children[j].style.transform = `scale(${width / 1080})`
+    }
+  }
 }
 
 export function getDimensions (ratio, parentWidth, parentHeight) {
@@ -25,10 +30,10 @@ export function getDimensions (ratio, parentWidth, parentHeight) {
     left = 0
     top = (parentHeight - height) / 2
   }
-  width = parseInt(width)
-  left = parseInt(left)
-  height = parseInt(height)
-  top = parseInt(top)
+  width = Math.floor(width)
+  left = Math.floor(left)
+  height = Math.floor(height)
+  top = Math.floor(top)
 
   return { width, height, left, top }
 }
