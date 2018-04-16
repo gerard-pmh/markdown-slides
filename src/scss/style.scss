@@ -1,0 +1,43 @@
+@import 'theme';
+@import 'mixins';
+
+body {
+  margin: 0;
+  background: $global-bg;
+}
+
+.slides-container {
+  position: fixed;
+  @include proportional-position(16, 9);
+  font-size: 1vmin;
+  overflow: visible;
+  display: flex;
+  flex: 1;
+}
+
+.slides {
+  display: flex;
+  &.enable-transition {
+    transition: margin-left $slide-transition;
+  }
+}
+
+.slide {
+  box-sizing: border-box;
+  @include proportional-size(16, 9);
+
+  background: $slide-bg;
+  padding: $slide-padding-top $slide-padding-right $slide-padding-bottom $slide-padding-left;
+
+  font-family: $default-font;
+  font-size: $default-font-size;
+
+  h1 {
+    font-family: $title-font;
+    font-size: $title-font-size;
+  }
+  pre code {
+    font-family: $code-font;
+    font-size: $code-font-size;
+  }
+}

@@ -7,17 +7,24 @@ $global-bg: darken($slide-bg, 80) !default;
 
 
 /**
+ * Code Colors
+ */
+
+@import '../../node_modules/highlight.js/styles/atom-one-dark.css';
+
+
+/**
  * Fonts
  */
 
-$default-font: sans-serif;
-$default-font-size: 2em;
+$default-font: sans-serif !default;
+$default-font-size: 2em !default;
 
-$title-font: sans-serif;
-$title-font-size: 3em;
+$title-font: sans-serif !default;
+$title-font-size: 3em !default;
 
-$code-font: monospace;
-$code-font-size: 1em;
+$code-font: monospace !default;
+$code-font-size: 1em !default;
 
 
 
